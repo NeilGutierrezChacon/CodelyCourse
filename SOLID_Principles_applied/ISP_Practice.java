@@ -3,7 +3,15 @@ public interface Animal {
     
 }
 
-public class Dog implements Animal {
+public interface Fly {
+    void fly();
+}
+
+public interface Bark {
+    void bark();
+}
+
+public class Dog implements Animal, Bark {
     
     @Override
     public void run() {
@@ -15,7 +23,7 @@ public class Dog implements Animal {
     }
 }
 
-public class Bird implements Animal {
+public class Bird implements Animal, Fly {
 
     @Override
     public void run() {
